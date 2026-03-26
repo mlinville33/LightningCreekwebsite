@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vmin;
+    border-bottom: 2px solid black;
+    font-size: xx-large;
+}
+
+.bodyContainer {
+    position: relative;
+}
+
+.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+    transition: filter 0.3s ease;
+  }
+
+.textContainer {
+    position: relative;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    font-size: large;
+    padding-top: 10px;
+}

@@ -1,0 +1,57 @@
+.header {
+    position: sticky;
+    display: flex;
+    top: 0;
+    height: 10vmin;
+    z-index: 1000;
+    background-color: rgb(16, 7, 63);
+    color: white;
+}
+
+.placeholder {
+    font-size: small;
+}
+
+.logo {
+    height: 10vmin;
+}
+
+.categories {
+    font-size: x-large;
+    position: flex;
+    padding: 20px;
+    align-content: center;
+    transition: background-color 0.3s;
+    color: #3199b6;
+}
+
+.categories.hovered {
+    background-color: aqua;
+}
+
+.siteTitle {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-left: 0;
+    animation: flicker 2s infinite alternate;
+    width: 100%;
+}
+
+.siteText {
+    margin: 0 12px;
+    color: #fff;
+    text-shadow: 0 0 8px #02aefd, 0 0 16px #02aefd;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    10% { opacity: 0.85; }
+    20% { opacity: 0.6; }
+    30% { opacity: 1; }
+    40% { opacity: 0.7; }
+    50% { opacity: 1; }
+}

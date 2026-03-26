@@ -1,0 +1,35 @@
+.form {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(125%, 60%);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 25%;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.formOverlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form input,
+.form textarea {
+  width: 95%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
