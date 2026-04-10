@@ -1,25 +1,25 @@
 /**
- * A footer component that sitcks to the bottom of the page
+ * A footer component that sticks to the bottom of the page.
  * Provides links to the home page, software page, and contact page.
  * Created by Michael Linville 7/11/2024
  */
 
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from './Footer.module.css';
 
 const Footer = () => {
     return (
-        // Need a parent container that holds all links
-        <div className={styles.footer}> 
-            <div className={styles.footerLinks}>
-                <a href="/">Home</a>
-                <a href="/software">Software</a>
-                <a href="/contact">Contact Us</a>
-            </div>
+        <footer className={styles.footer}>
+            <nav className={styles.footerLinks} aria-label="Footer navigation">
+                <Link to="/">Home</Link>
+                <Link to="/services">Services</Link>
+                <Link to="/contact">Contact Us</Link>
+            </nav>
             <div className={styles.footerText}>
                 &copy; {new Date().getFullYear()} Lightning Creek LLC. All rights reserved.
             </div>
-        </div>
+        </footer>
     )
 };
 

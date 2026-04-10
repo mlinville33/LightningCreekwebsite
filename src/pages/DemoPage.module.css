@@ -1,0 +1,72 @@
+.container {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    font-family: sans-serif;
+    color: #1a1a2e;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.demoGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.demoCard {
+    width: 280px;
+    max-width: 100%;
+    padding: 32px 24px;
+    background: #16213e;
+    border: 2px solid #0f3460;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease, border-color 0.3s ease;
+}
+
+.demoCard:hover {
+    transform: translateY(-4px);
+    border-color: #53a8b6;
+}
+
+.demoCard:focus-visible {
+    outline: 2px solid #02aefd;
+    outline-offset: 2px;
+}
+
+.demoCard h2 {
+    font-size: 1.4rem;
+    color: #eee;
+    margin-bottom: 8px;
+}
+
+.demoCard p {
+    font-size: 1rem;
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .demoCard {
+        width: 100%;
+    }
+}

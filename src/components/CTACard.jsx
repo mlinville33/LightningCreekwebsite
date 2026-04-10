@@ -9,18 +9,16 @@ import CTAButton from "./CTAButton";
 const CTACard = ({ imageSrc, text, description, altText, buttonText, onButtonClick }) => {
     return (
         <div className={styles.ctaCard}>
-            <img src={imageSrc} alt={altText} className={styles.ctaImage} />
+            <img src={imageSrc} alt={altText} className={styles.ctaImage} loading="lazy" />
             <div className={styles.textContainer}>
                 {text}
             </div>
-            {/* // TODO: Add a div to provide description text */}
             <div className={styles.descriptionContainer}>
                 {description}
             </div>
             <div className={styles.buttonContainer}>
                 <CTAButton text={buttonText} onClick={onButtonClick} />
             </div>
-            
         </div>
     );
 };

@@ -1,0 +1,316 @@
+.page {
+    min-height: 100vh;
+    background: #1a1a2e;
+    padding: 40px 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timerBox {
+    position: relative;
+    width: 100%;
+    padding: 40px 24px;
+    border-radius: 16px;
+    border: 2px solid #0f3460;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+    transition: box-shadow 0.2s, background 0.3s, border-color 0.3s;
+    text-align: center;
+}
+
+.timerBox:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.timerBox:focus-visible {
+    outline: 2px solid #02aefd;
+    outline-offset: 2px;
+}
+
+.running {
+    cursor: default;
+}
+
+.running:hover {
+    box-shadow: none;
+}
+
+.flashing {
+    cursor: default;
+    animation: flash 0.5s infinite alternate;
+}
+
+.flashing:hover {
+    box-shadow: none;
+}
+
+@keyframes flash {
+    from { background: #e94560; border-color: #ff6b6b; }
+    to   { background: #16213e; border-color: #0f3460; }
+}
+
+.itemName {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #eee;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.timerDisplay {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #53a8b6;
+    font-variant-numeric: tabular-nums;
+    margin-top: 8px;
+    min-height: 3.5rem;
+}
+
+.hint {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 6px;
+}
+
+/* Timer action buttons (cancel / reset) */
+
+.timerActions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.resetBtn,
+.cancelTimerBtn {
+    padding: 6px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.resetBtn {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.resetBtn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.cancelTimerBtn {
+    background: rgba(233, 69, 96, 0.3);
+    color: #ff6b6b;
+}
+
+.cancelTimerBtn:hover {
+    background: rgba(233, 69, 96, 0.5);
+}
+
+/* Edit button */
+
+.editBtn {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.editBtn:hover {
+    color: #eee;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Edit mode */
+
+.editMode {
+    cursor: default;
+    padding: 28px 24px;
+}
+
+.editMode:hover {
+    box-shadow: none;
+}
+
+.editForm {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+}
+
+.editLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #aaa;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.editInput {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #1a1a2e;
+    color: #eee;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.editInput:focus {
+    border-color: #53a8b6;
+}
+
+/* Color swatches */
+
+.colorRow {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.colorSwatch {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s;
+    padding: 0;
+}
+
+.colorSwatch:hover {
+    transform: scale(1.15);
+}
+
+.colorSelected {
+    border-color: #fff;
+    transform: scale(1.15);
+}
+
+.colorPicker {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+}
+
+/* Edit action buttons */
+
+.editActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.saveBtn,
+.cancelBtn,
+.deleteBtn {
+    flex: 1;
+    padding: 8px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.saveBtn {
+    background: #53a8b6;
+    color: #fff;
+}
+
+.saveBtn:hover {
+    background: #3d8a96;
+}
+
+.cancelBtn {
+    background: #333;
+    color: #ccc;
+}
+
+.cancelBtn:hover {
+    background: #444;
+}
+
+.deleteBtn {
+    background: #6a040f;
+    color: #eee;
+}
+
+.deleteBtn:hover {
+    background: #9d0208;
+}
+
+/* Add timer button */
+
+.addBtn {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    border: 2px dashed #333;
+    background: transparent;
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.addBtn:hover {
+    border-color: #53a8b6;
+    color: #53a8b6;
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .timerBox {
+        padding: 28px 16px;
+    }
+
+    .itemName {
+        font-size: 1.4rem;
+    }
+
+    .timerDisplay {
+        font-size: 2.4rem;
+    }
+}
